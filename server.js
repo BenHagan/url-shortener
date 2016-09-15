@@ -36,6 +36,7 @@ MongoClient.connect(url, function(err, db) {
   });
 
   app.get('/new/:id*', function(req, res) {
+    // Regex for valid URL
     var re = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
     var website = req.params.id + req.params[0];
 
@@ -62,4 +63,4 @@ MongoClient.connect(url, function(err, db) {
 
   app.listen(process.env.PORT);
 
-});
+})co  ;
